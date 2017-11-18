@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   res.status(200).send('Tha duck don\'t cluck! Stay ready.')
 })
 
-app.post('/duck', (req, res) => {
+app.post('/message', (req, res) => {
   const name = req.body.user_name
   const payload = {
     text: `...tha duck is here for you, ${name}.`
