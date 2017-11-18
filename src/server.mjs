@@ -27,8 +27,6 @@ app.post('/message', (req, res) => {
     text: `whaddup ${name}...the duck is here for you, and tha duck don\'t cluck! The duck _stay_ ready.\n What's on your mind?`
   }
 
-  app.log('username:', name)
-
   if (name !== 'slackbot') {
     res.status(200).json(payload)
   } else {
