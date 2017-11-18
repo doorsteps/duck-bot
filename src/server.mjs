@@ -28,12 +28,12 @@ app.post('/message', (req, res) => {
   const payload = {
     text: `whaddup ${name}...the duck is here for you, and tha duck don\'t cluck! The duck _stay_ ready.\n What's on your mind?`
   }
-  res.status(200).json(payload)
-  // if (name !== 'slackbot') {
-  //   res.status(200).json(payload)
-  // } else {
-  //   res.status(200).end()
-  // }
+
+  if (name !== 'slackbot') {
+    res.status(200).json(payload)
+  } else {
+    res.status(200).end()
+  }
 })
 
 
