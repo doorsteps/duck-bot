@@ -22,9 +22,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/message', (req, res, next) => {
-  console.log(`req.body: \n ${JSON.parse(req.body.user_name)}`)
+  console.log(`req.body: \n ${JSON.parse(req.body)}`)
 
-  const name = JSON.parse(req.body).user_name
+  const name = req.body.user_name
   const payload = {
     text: `whaddup ${name}...the duck is here for you, and tha duck don\'t cluck! The duck _stay_ ready.\n What's on your mind?`
   }
