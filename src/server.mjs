@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/message', (req, res) => {
-  log(req.body)
+  log(`req.body: \n ${req.body}`)
 
   const name = req.body.user_name
   const payload = {
