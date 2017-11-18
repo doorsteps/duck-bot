@@ -22,18 +22,18 @@ app.get('/', (req, res) => {
 })
 
 app.post('/message', (req, res) => {
-  console.log(`req.body: \n ${req.body}`)
+  console.log(`req.body: \n ${req.body.user_name}`)
 
   const name = req.body.user_name
   const payload = {
     text: `whaddup ${name}...the duck is here for you, and tha duck don\'t cluck! The duck _stay_ ready.\n What's on your mind?`
   }
-
-  if (name !== 'slackbot') {
-    res.status(200).json(payload)
-  } else {
-    res.status(200).end()
-  }
+  res.status(200).json(payload)
+  // if (name !== 'slackbot') {
+  //   res.status(200).json(payload)
+  // } else {
+  //   res.status(200).end()
+  // }
 })
 
 
