@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   res.status(200).send('Tha duck don\'t cluck! The duck stay ready.')
 })
 
-app.post('/message', (req, res) => {
+app.post('/message', (req, res, next) => {
   console.log(`req.body: \n ${req.body.user_name}`)
 
   const name = req.body.user_name
