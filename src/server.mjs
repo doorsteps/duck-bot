@@ -18,16 +18,16 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-  res.status(200).send('Tha duck don\'t cluck! Stay ready.')
+  res.status(200).send('Tha duck don\'t cluck! The duck stay ready.')
 })
 
 app.post('/message', (req, res) => {
   const name = req.body.user_name
   const payload = {
-    text: `whaddup ${name}...the duck is here for you, cuz Tha duck don\'t cluck! I _stay_ ready.`
+    text: `whaddup ${name}...the duck is here for you, and tha duck don\'t cluck! The duck _stay_ ready.\n What's on your mind?`
   }
 
-  app.log('username:', username)
+  app.log('username:', name)
 
   if (name !== 'slackbot') {
     res.status(200).json(payload)
