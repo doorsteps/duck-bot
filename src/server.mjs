@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const log = debug('server')
 
-const port = process.env.PORT || 7070
+const port = process.env.PORT
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(logger('tiny'))
