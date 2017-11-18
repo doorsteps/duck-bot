@@ -24,10 +24,16 @@ app.get('/', (req, res) => {
 app.post('/message', (req, res) => {
   const name = req.body.user_name
   const payload = {
-    text: `...tha duck is here for you, ${name}.`
+    text: `whaddup ${name}...the duck is here for you, cuz Tha duck don\'t cluck! I _stay_ ready.`
   }
 
-  return name !== 'slackbot' ? res.status(200).json(payload) : res.status(200).end()
+  app.log('username:', username)
+
+  if (name !== 'slackbot') {
+    res.status(200).json(payload)
+  } else {
+    res.status(200).end()
+  }
 })
 
 
