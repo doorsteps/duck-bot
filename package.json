@@ -1,0 +1,26 @@
+{
+  "name": "duck-bot",
+  "author": "Seinna Gausman <seinna.gausman@move.com>",
+  "version": "1.0.0",
+  "license": "ISC",
+  "engines": {
+    "node": "^8.4.0"
+  },
+  "main": "server.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r dotenv/config src/server.mjs"
+  },
+  "bugs": {
+    "url": "https://github.com/doorsteps/duck-bot/issues"
+  },
+  "homepage": "https://github.com/doorsteps/duck-bot#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "request": "^2.83.0"
+  }
+}
