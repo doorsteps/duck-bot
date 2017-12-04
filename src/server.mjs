@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 app.post('/message', (req, res, next) => {
   const name = req.body.user_name
   const payload = {
-    text: `Whaddup ${name}. The duck is here for you. \nYou should know, the duck don\'t cluck. \nAlso, the duck _stay_ ready. (Just to listen, of course. I'm not a thug.) \n So what's on your mind?`
+    text: `Hey ${name}! What's up?`
   }
 
   if (name !== 'slackbot') {
